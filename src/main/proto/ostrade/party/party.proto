@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option java_package = "org.ostrade.proto.party";
+option java_outer_classname = "PartyProtos";
+option java_multiple_files = true;
+
+package ostrade.party;
+
+message PartyId {
+  string source = 1;
+  string id = 2;
+}
+
+message Party {
+  repeated PartyId partyIds = 1;
+  string name = 2;
+}
